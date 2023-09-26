@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark/Light Mode</title>
+</head>
+<body>
+    <h1 id="para">This is light MOde</h1>
+    <button onclick="dalight()">Toggle Theme</button>
+    <script>
+        const para = document.getElementById('para');
+        let mbody = document.body;
+        function dalight(){
+            if(mbody === "black"){
+                mbody.style.backgroundColor = "white";
+                para.innerText = "This is light Mode";
+                para.style.color = "black"
+            }else{
+                mbody.style.backgroundColor="black";
+                para.innerText ="This is Dark Mode";
+                para.style.color ="white"
+            }
+        }
+    </script>
+</body>
+</html>

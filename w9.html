@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="login()">Login</button>
+    <button onclick="logout()">Logout</button>
+    <h2 id="para"></h2>
+    <script>
+        function login(){
+            localStorage.setItem('log',true);
+            window.location.reload()
+        }
+        function logout(){
+            localStorage.setItem('log',false)
+            window.location.reload();
+        }
+        const para = document.getElementById('para');
+        const status = localStorage.getItem('log')
+        if(status == 'true'){
+            para.innerHTML = "User has logged In";
+        }else{
+            para.innerHTML = "User has not logged In";
+        }
+    </script>
+</body>
+</html>

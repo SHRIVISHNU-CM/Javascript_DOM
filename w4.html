@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <h1>Sign Up Form</h1>
+    <form >
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="text">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email">
+        </div>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <script>
+        const name = document.getElementById('text'),
+            email = document.getElementById('email'),
+            password = document.getElementById('password'),
+            btn = document.getElementById('submit');
+            btn.addEventListener("click",()=>{
+                if(name.value.length >= 3 && password.value.length >0 ){
+                    alert("Form Validation is successfull")
+                }else{
+                    alert('Form Validation is unsuccessfull')
+                }
+            })
+    </script>
+</body>
+</html>

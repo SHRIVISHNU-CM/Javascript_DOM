@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <h2 id="para"></h2>
+    <button id="toggle">Toggle Button</button><br>
+    <img src="download.png" alt="logo" id="img">
+    <script>
+        const para = document.getElementById('para');
+        const btn = document.getElementById('toggle');
+        const img = document.getElementById('img')
+        let dis = false
+        btn.addEventListener("click",()=>{
+            if(dis){
+                dis = false
+                img.style.display = "none"
+            }else{
+                dis=true;
+                img.style.display ="block"
+            }
+        })
+    </script>
+</body>
+</html>

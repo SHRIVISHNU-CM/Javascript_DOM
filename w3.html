@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="increment()">+</button>
+    <span id="count">0</span>
+    <button onclick="decrement()">-</button>
+    <script>
+        let count = document.getElementById('count');
+        function increment(){
+            count.innerText = Number(count.innerText) +1;
+        }
+        function decrement(){
+            if (Number(count.innerText)> 0){
+                count.innerText = Number(count.innerText) -1
+            }else{
+                alert("counter is going beyond zero")
+            }
+        }
+    </script>
+</body>
+</html>
